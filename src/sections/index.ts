@@ -1,4 +1,4 @@
-import Hero from "./Hero";
+import Hero from "./hero";
 import PopularProducts from "./popular-products";
 import SuperQuality from "./super-quality";
 import Services from "./services";
