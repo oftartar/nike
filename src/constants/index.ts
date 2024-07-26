@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import {
   facebook,
   instagram,
@@ -21,14 +22,29 @@ import {
   thumbnailShoe3,
 } from "../../public/images";
 
-export const navLinks = [
+export type navLink = {
+  href: string;
+  label: string;
+};
+
+export type shoe = {
+  thumbnail: string;
+  bigShoe: StaticImageData;
+};
+
+export type statistic = {
+  value: string;
+  label: string;
+};
+
+export const navLinks: navLink[] = [
   { href: "#home", label: "Home" },
   { href: "#about-us", label: "About Us" },
   { href: "#products", label: "Products" },
   { href: "#contact-us", label: "Contact Us" },
 ];
 
-export const shoes = [
+export const shoes: shoe[] = [
   {
     thumbnail: thumbnailShoe1,
     bigShoe: bigShoe1,
@@ -43,7 +59,7 @@ export const shoes = [
   },
 ];
 
-export const statistics = [
+export const statistics: statistic[] = [
   { value: "1k+", label: "Brands" },
   { value: "500+", label: "Shops" },
   { value: "250k+", label: "Customers" },

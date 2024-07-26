@@ -1,6 +1,15 @@
-import Image from "next/image";
+import { shoe } from "@/constants";
+import Image, { StaticImageData } from "next/image";
 
-const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImage }) => {
+const ShoeCard = ({
+  imgURL,
+  changeBigShoeImage,
+  bigShoeImage,
+}: {
+  imgURL: shoe;
+  changeBigShoeImage: (shoe: StaticImageData) => void;
+  bigShoeImage: StaticImageData;
+}) => {
   const handleClick = () => {
     if (bigShoeImage !== imgURL.bigShoe) {
       changeBigShoeImage(imgURL.bigShoe);

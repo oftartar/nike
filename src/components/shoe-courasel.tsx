@@ -1,8 +1,8 @@
 "use client";
 
 import ShoeCard from "@/components/shoe-card";
-import { shoes } from "@/constants";
-import Image from "next/image";
+import { shoe, shoes } from "@/constants";
+import Image, { StaticImageData } from "next/image";
 import { bigShoe1 } from "../../public/images";
 import { useState } from "react";
 
@@ -23,7 +23,9 @@ const ShoeCourasel = () => {
           <div key={index}>
             <ShoeCard
               imgURL={shoe}
-              changeBigShoeImage={(shoe) => setBigShoeImage(shoe)}
+              changeBigShoeImage={(shoeImage: StaticImageData) =>
+                setBigShoeImage(shoeImage)
+              }
               bigShoeImage={bigShoeImage}
             />
           </div>
