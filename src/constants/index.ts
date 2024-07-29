@@ -37,6 +37,18 @@ export type statistic = {
   label: string;
 };
 
+export type product = {
+  imgURL: string;
+  name: string;
+  price: string;
+};
+
+export type service = {
+  imgURL: string;
+  label: string;
+  subtext: string;
+};
+
 export const navLinks: navLink[] = [
   { href: "#home", label: "Home" },
   { href: "#about-us", label: "About Us" },
@@ -65,7 +77,7 @@ export const statistics: statistic[] = [
   { value: "250k+", label: "Customers" },
 ];
 
-export const products = [
+export const products: product[] = [
   {
     imgURL: shoe4,
     name: "Nike Air Jordan-01",
@@ -88,7 +100,7 @@ export const products = [
   },
 ];
 
-export const services = [
+export const services: service[] = [
   {
     imgURL: truckFast,
     label: "Free shipping",
