@@ -49,6 +49,13 @@ export type service = {
   subtext: string;
 };
 
+export type review = {
+  imgURL: string;
+  customerName: string;
+  rating: number;
+  feedback: string;
+};
+
 export const navLinks: navLink[] = [
   { href: "#home", label: "Home" },
   { href: "#about-us", label: "About Us" },
@@ -119,7 +126,7 @@ export const services: service[] = [
   },
 ];
 
-export const reviews = [
+export const reviews: review[] = [
   {
     imgURL: customer1,
     customerName: "Morich Brown",
