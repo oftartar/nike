@@ -4,10 +4,12 @@ const button = ({
   children,
   iconURL,
   type,
+  fullWidth,
 }: {
   children: React.ReactNode;
   iconURL?: string;
   type?: "outline";
+  fullWidth?: boolean;
 }) => {
   return (
     <button
@@ -15,7 +17,7 @@ const button = ({
         type === "outline"
           ? "bg-white border-slate-gray text-slate-gray"
           : "bg-coral-red border-coral-red text-white"
-      }`}
+      } ${fullWidth && "w-full"}`}
     >
       {children}
       {iconURL && (
