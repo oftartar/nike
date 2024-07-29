@@ -56,6 +56,21 @@ export type review = {
   feedback: string;
 };
 
+export type icon = {
+  src: string;
+  alt: string;
+};
+
+export type footerLink = {
+  name: string;
+  link: string;
+};
+
+export type footerSection = {
+  title: string;
+  links: footerLink[];
+};
+
 export const navLinks: navLink[] = [
   { href: "#home", label: "Home" },
   { href: "#about-us", label: "About Us" },
@@ -143,7 +158,7 @@ export const reviews: review[] = [
   },
 ];
 
-export const footerLinks = [
+export const footerLinks: footerSection[] = [
   {
     title: "Products",
     links: [
@@ -174,7 +189,7 @@ export const footerLinks = [
   },
 ];
 
-export const socialMedia = [
+export const socialMedia: icon[] = [
   { src: facebook, alt: "facebook logo" },
   { src: twitter, alt: "twitter logo" },
   { src: instagram, alt: "instagram logo" },
